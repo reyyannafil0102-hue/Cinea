@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cinea</title>
+    <link rel="stylesheet" href="stylegallery.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open sidebar">☰</button>
+    <aside id="siteSidebar" class="site-sidebar" aria-hidden="true">
+        <div class="sidebar-head">
+            <div class="sidebar-brand"><div class="logo-icon">C</div><div>CINEA</div></div>
+            <button id="sidebarClose" class="sidebar-close" aria-label="Close sidebar">×</button>
+        </div>
+        <div class="sidebar-search"><input placeholder="Search movies & series" aria-label="Search"></div>
+        <div class="sidebar-section">
+            <h3>Popular Now</h3>
+            <div class="popular-list">
+                <a class="popular-item" href="Detail-Movies/detail-20thcenturygirl.html">
+                    <div class="popular-thumb" style="background-image:url('https://image.tmdb.org/t/p/original/j73DItU1L0N7nmGA9S6sjwxKzPM.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">20th Century Girl</div><div class="popular-sub">Movie • 2022</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Series/detail-berakingbad.html">
+                    <div class="popular-thumb" style="background-image:url('https://image.tmdb.org/t/p/original/4WM4yvTLrRi5lSHNjQMcIYRkenm.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Breaking Bad</div><div class="popular-sub">Series • 2008</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Movies/detail-tangled.html">
+                    <div class="popular-thumb" style="background-image:url('https://i.ebayimg.com/images/g/qS4AAOSwDk5Tre86/s-l1200.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Tangled</div><div class="popular-sub">Movie • 2010</div></div>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-footer">Popular mix of movies & series. Click an item to view details.</div>
+    </aside>
+    <script src="sidebar.js"></script>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">GALLERY</h1>
+
+        <p class="page-subtitle">Explore curated Behind The Scenes, Movie Stills, Series Stills, and exclusive posters.</p>
+
+        <!-- Featured Gallery -->
+        <h2 class="section-header">Featured Gallery</h2>
+        <div class="featured-gallery">
+            <div class="featured-item">
+                <div class="featured-image">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nB9eG5TzdU0" title="The Summer I Turned Pretty - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-item">
+                <div class="featured-image">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pHIXtOrHF80" title="The Summer I Turned Pretty - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-item">
+                <div class="featured-image">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rt-2cxAiPJk" title="The Summer I Turned Pretty - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Behind The Scene Section -->
+        <h2 class="section-header">Behind The Scene Film/Series</h2>
+        <div class="bts-grid">
+            <!-- Stranger Things -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ZGgQuxJq8WU" title="Stranger Things - Behind The Scenes Season 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">Stranger Things - Season 4</h3>
+                    <p class="bts-desc">Get an exclusive behind-the-scenes look at the making of Stranger Things Season 4. See how the cast and crew brought the Upside Down to life.</p>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/x_qm280q2e0" title="Avatar: The Way of Water - Behind The Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">Avatar: The Way of Water</h3>
+                    <p class="bts-desc">Discover the groundbreaking technology and underwater motion capture techniques used to create the stunning visuals of Pandora's oceans.</p>
+                </div>
+            </div>
+
+            <!-- The Summer I Turned Pretty -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/OAZCbCgZ7XQ" title="The Summer I Turned Pretty - Behind The Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">The Summer I Turned Pretty</h3>
+                    <p class="bts-desc">Behind the scenes of everyone's favorite summer love story. Go inside the making of this romantic coming-of-age drama.</p>
+                </div>
+            </div>
+
+            <!-- Harry Potter -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/cD5S1ZvBd-0" title="Harry Potter - Behind The Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">Harry Potter</h3>
+                    <p class="bts-desc">Step behind the scenes of the wizarding world. See how the magic was created in the beloved Harry Potter film series.</p>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/jhyY5e5grzE" title="Wednesday - Behind The Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">Wednesday - Season 2</h3>
+                    <p class="bts-desc">Behind the scenes of the Addams Family spinoff. Discover how Jenna Ortega and the team created Wednesday's unique dark world.</p>
+                </div>
+            </div>
+
+            <!-- Penthouse -->
+            <div class="bts-card">
+                <div class="bts-image">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/O-Dkd5XpW1w" title="Penthouse - Behind The Scenes Season 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bts-info">
+                    <h3 class="bts-title">Penthouse - Season 1</h3>
+                    <p class="bts-desc">Behind the scenes of Penthouse Season 1 — the drama, production and secrets behind the hit series. (Link to be added)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-content">
+            <button class="video-modal-close" aria-label="Close">&times;</button>
+            <div class="video-modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 CINEA. Your Guide to What's Next. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

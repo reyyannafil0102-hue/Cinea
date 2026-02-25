@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cinea</title>
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open sidebar">☰</button>
+    <aside id="siteSidebar" class="site-sidebar" aria-hidden="true">
+        <div class="sidebar-head">
+            <div class="sidebar-brand"><div class="logo-icon">C</div><div>CINEA</div></div>
+            <button id="sidebarClose" class="sidebar-close" aria-label="Close sidebar">×</button>
+        </div>
+        <div class="sidebar-search"><input placeholder="Search movies & series" aria-label="Search"></div>
+        <div class="sidebar-section">
+            <h3>Popular Now</h3>
+            <div class="popular-list">
+                <a class="popular-item" href="Detail-Movies/detail-titanic.html">
+                    <div class="popular-thumb" style="background-image:url('https://m.media-amazon.com/images/M/MV5BMjIxNTYxNzYxNl5BMl5BanBnXkFtZTcwNTYyNzI3Mw@@._V1_.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Titanic</div><div class="popular-sub">Movie • 1997</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Series/detail-gamesofthrones.html">
+                    <div class="popular-thumb" style="background-image:url('https://awsimages.detik.net.id/community/media/visual/2021/12/06/game-of-thrones.jpeg?w=1200')"></div>
+                    <div class="popular-meta"><div class="popular-title">Game of Thrones</div><div class="popular-sub">Series • 2011</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Movies/detail-500daysofsummer.html">
+                    <div class="popular-thumb" style="background-image:url('https://image.tmdb.org/t/p/original/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">(500) Days of Summer</div><div class="popular-sub">Movie • 2009</div></div>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-footer">Popular mix of movies & series. Click an item to view details.</div>
+    </aside>
+    <script src="sidebar.js"></script>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>CONTACT US!</h1>
+        <p>We'd love to hear from you! Whether you have a question about our content, need support, or just want to share your favorite movie, we're here to help!</p>
+    </div>
+
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Get In Touch -->
+            <div class="get-in-touch">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <h3>Our Office</h3>
+                        <p>Jalan Simpang Lima, Kel. Mugassari, Kec. Semarang Selatan,<br>Kota Semarang,<br>50249</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone Number</h3>
+                        <p>+62 852 2729 2225<br>Mon-Fri: 09.00 – 18.00 WIB</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Address</h3>
+                        <p>info@cinea.com<br>support@cinea.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Website</h3>
+                        <p>www.cinea.com<br>www.cinea.support</p>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <h3>Follow Us on Social Media</h3>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">𝕏</div>
+                        <div class="social-icon">in</div>
+                        <div class="social-icon">📷</div>
+                        <div class="social-icon">▶️</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-section">
+                <h2 class="section-title">Form</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="from_name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="reply_to" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Suggestion</label>
+                        <textarea name="message" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="business-hours">
+            <h2>Business Hours</h2>
+            <div class="hours-card">
+                <h3 class="hours-title">Office Hours</h3>
+                <div class="hours-row">
+                    <span class="day">Monday - Friday</span>
+                    <span class="time">09.00 – 18.00 WIB</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Saturday</span>
+                    <span class="time">10.00 - 16.00 WIB</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Sunday</span>
+                    <span class="time">Closed</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Public Holidays</span>
+                    <span class="time">Closed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-question">How can I suggest a movie or series to be added?</div>
+                    <div class="faq-answer">Please use our contact form to submit your movie or series suggestions. We review all submissions and add content that matches our quality standards and user preferences regularly.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">Can you provide streaming links or download options?</div>
+                    <div class="faq-answer">No, CINEA is an information-only platform. We provide details about movies and series but do not host or link to streaming or download services. Please use legal streaming platforms.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">I was asked to provide content information. How do I do that?</div>
+                    <div class="faq-answer">We collect all relevant info with care. For any corrections or additions, please use our contact form and provide as much detail as possible. We'll review and update within 2-3 business days.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">I don't see my favorite show. What should I do?</div>
+                    <div class="faq-answer">If you cannot find a favorite show, please suggest it using our contact form. We're constantly expanding our database and appreciate all user feedback and recommendations.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">How do I report incorrect information or copyright issues?</div>
+                    <div class="faq-answer">If you spot incorrect information or have copyright concerns, please contact us immediately through our support email. We take these matters seriously and will address them promptly.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question">How often is the content database updated?</div>
+                    <div class="faq-answer">Our content is constantly updated with new releases and information. Major updates happen weekly, while corrections and minor updates are made daily based on user feedback.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <h2>Visit Our Office</h2>
+            <div class="map-card">
+                <div class="map-icon">📍</div>
+                <h3>CINEA Headquarters</h3>
+                <p>Jalan Simpang Lima, RT 02 RW 01, Kel. Mugassari, Kec. Semarang Selatan, Kota Semarang, 50249</p>
+                <p style="margin-top: 1rem; color: #6b7280; font-size: 0.9rem;">Open for visitors by appointment only</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 CINEA. Your Guide to What's Next. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="contactusereply.js"></script>
+    </body>
+    </html>

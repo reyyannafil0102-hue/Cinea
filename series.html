@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series - Cinea</title>
+    <link rel="stylesheet" href="styleseries.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open sidebar">☰</button>
+    <aside id="siteSidebar" class="site-sidebar" aria-hidden="true">
+        <div class="sidebar-head">
+            <div class="sidebar-brand"><div class="logo-icon">C</div><div>CINEA</div></div>
+            <button id="sidebarClose" class="sidebar-close" aria-label="Close sidebar">×</button>
+        </div>
+        <div class="sidebar-search"><input placeholder="Search movies & series" aria-label="Search"></div>
+        <div class="sidebar-section">
+            <h3>Popular Now</h3>
+            <div class="popular-list">
+                <a class="popular-item" href="Detail-Series/detail-strangerthings.html">
+                    <div class="popular-thumb" style="background-image:url('https://wallpapercave.com/wp/wp1839578.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Stranger Things</div><div class="popular-sub">Series • 2016</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Series/detail-gamesofthrones.html">
+                    <div class="popular-thumb" style="background-image:url('https://awsimages.detik.net.id/community/media/visual/2021/12/06/game-of-thrones.jpeg?w=1200')"></div>
+                    <div class="popular-meta"><div class="popular-title">Game of Thrones</div><div class="popular-sub">Series • 2011</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Movies/detail-titanic.html">
+                    <div class="popular-thumb" style="background-image:url('https://m.media-amazon.com/images/M/MV5BMjIxNTYxNzYxNl5BMl5BanBnXkFtZTcwNTYyNzI3Mw@@._V1_.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Titanic</div><div class="popular-sub">Movie • 1997</div></div>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-footer">Popular mix of movies & series. Click an item to view details.</div>
+    </aside>
+    <script src="sidebar.js"></script>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html" class="active">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">SERIES</h1>
+
+        <!-- Featured Series -->
+        <h2 class="section-header">Featured Series</h2>
+        <div class="featured-grid">
+            <a href="Detail-Series/detail-strangerthings.html" class="featured-card">
+                <div class="featured-poster">
+                    <img src="https://wallpapercave.com/wp/wp1839578.jpg" alt="Stranger Things Poster">
+                </div>
+                <div class="featured-info">
+                    <h3>STRANGER THINGS</h3>
+                    <div class="featured-meta">2016 - Present | 4 Seasons</div>
+                    <p class="featured-desc">When a young boy vanishes, a small town uncovers mysteries involving secret experiments and supernatural forces.</p>
+                </div>
+            </a>
+            <a href="Detail-Series/detail-berakingbad.html" class="featured-card">
+                <div class="featured-poster">
+                    <img src="https://image.tmdb.org/t/p/original/4WM4yvTLrRi5lSHNjQMcIYRkenm.jpg" alt="Breaking Bad Poster" loading="lazy">
+                </div>
+                <div class="featured-info">
+                    <h3>BREAKING BAD</h3>
+                    <div class="featured-meta">2008 - 2013 | 5 Seasons</div>
+                    <p class="featured-desc">A high school chemistry teacher turns to producing methamphetamine after a terminal diagnosis, spiraling into crime to secure his family's future.</p>
+                </div>
+            </a>
+            <a href="Detail-Series/detail-gamesofthrones.html" class="featured-card">
+                <div class="featured-poster">
+                    <img src="https://files.ekmcdn.com/allwallpapers/images/game-of-thrones-winter-is-here-daenerys-targaryen-61x91-5cm-movie-poster-31585-p.jpg?v=599d4741-9423-4652-b292-e55e0354b409" alt="Game of Thrones Poster">
+                </div>
+                <div class="featured-info">
+                    <h3>GAME OF THRONES</h3>
+                    <div class="featured-meta">2011 - 2019 | 8 Seasons</div>
+                    <p class="featured-desc">Nine noble families vie for control of the Iron Throne as an ancient threat returns to threaten all of Westeros.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- All Series -->
+        <h2 class="section-header">All Series</h2>
+        <div class="series-grid">
+            <!-- Stranger Things -->
+            <div class="series-card hot">
+                <div class="series-poster">
+                    <img src="https://wallpapercave.com/wp/wp1839578.jpg" alt="Stranger Things Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">STRANGER THINGS</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">8.7/10</span>
+                        <span class="series-meta">2016-2025</span>
+                    </div>
+                    <p class="series-desc">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.</p>
+                    <p class="series-genres-line">Drama • Fantasy • Horror</p>
+                    <a href="Detail-Series/detail-strangerthings.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+            <!-- Breaking Bad -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://image.tmdb.org/t/p/original/4WM4yvTLrRi5lSHNjQMcIYRkenm.jpg" alt="Breaking Bad">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">BREAKING BAD</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">9.5/10</span>
+                        <span class="series-meta">2008-2013</span>
+                    </div>
+                    <p class="series-desc">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
+                    <p class="series-genres-line">Crime • Drama • Thriller</p>
+                    <a href="Detail-Series/detail-berakingbad.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+            <!-- Game of Thrones -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://files.ekmcdn.com/allwallpapers/images/game-of-thrones-winter-is-here-daenerys-targaryen-61x91-5cm-movie-poster-31585-p.jpg?v=599d4741-9423-4652-b292-e55e0354b409" alt="Game of Thrones Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">GAME OF THRONES</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">9.3/10</span>
+                        <span class="series-meta">2011-2019</span>
+                    </div>
+                    <p class="series-desc">Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.</p>
+                    <p class="series-genres-line">Action • Adventure • Drama</p>
+                    <a href="Detail-Series/detail-gamesofthrones.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+             <!-- THE PENTHOUSE (SEASON 1)  -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://image.tmdb.org/t/p/original/33WzWRlmxjpW00zOGin6qrx6iqU.jpg" alt="Penthouse(S1) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE PENTHOUSE (S1)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">8.4/10</span>
+                        <span class="series-meta">2020</span>
+                    </div>
+                    <p class="series-desc">Residents of a luxury apartment complex will stop at nothing to protect their power, secrets, and ambitions, even if it means destroying others.</p>
+                    <p class="series-genres-line">Drama • Thriller</p>
+                    <a href="Detail-Series/detail-thepenthhouse1.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+             <!-- THE PENTHOUSE (SEASON 2)  -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://image.tmdb.org/t/p/w500/syAhITjoMsrocZJCe3plV4yxLZU.jpg" alt="Penthouse(S2) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE PENTHOUSE (S2)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">8.2/10</span>
+                        <span class="series-meta">2021</span>
+                    </div>
+                    <p class="series-desc">The battle for power at Hera Palace escalates as revenge deepens and past crimes resurface with deadly consequences.</p>
+                    <p class="series-genres-line">Drama • Thriller</p>
+                    <a href="Detail-Series/detail-thepenthouse2.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+             <!-- THE PENTHOUSE (SEASON 3)  -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://images.justwatch.com/poster/249790900/s718/season-3.jpg" alt="Penthouse(S3) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE PENTHOUSE (S3)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">7.9/10</span>
+                        <span class="series-meta">2021</span>
+                    </div>
+                    <p class="series-desc">The final chapter delivers ultimate revenge and consequences as long-buried crimes come to light inside Hera Palace.</p>
+                    <p class="series-genres-line">Drama • Thriller</p>
+                    <a href="Detail-Series/detail-thepenthouse3.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+             <!-- THE SUMMER I TURNED PRETTY (SEASON 1) -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://image.tmdb.org/t/p/original/utNX6hHohGmenZLW5pFMSrdOhL7.jpg" alt="The Summer I Turned Pretty (S1) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE SUMMER I TURNED PRETTY (S1)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">7.4/10</span>
+                        <span class="series-meta">2022</span>
+                    </div>
+                    <p class="series-desc">A teenage girl experiences love, heartbreak, and self-discovery during a life changing summer spent at the beach with family friends. </p>
+                    <p class="series-genres-line">Drama • Romance</p>
+                    <a href="Detail-Series/detail-thesummeriturnedprettys1.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+            <!-- THE SUMMER I TURNED PRETTY (SEASON 2) -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://image.tmdb.org/t/p/original/A7ziP4QaTRAwWqGhHyknN5UULlf.jpg" alt="The Summer I Turned Pretty (S2) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE SUMMER I TURNED PRETTY (S2)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">7.5/10</span>
+                        <span class="series-meta">2023</span>
+                    </div>
+                    <p class="series-desc">Belly returns to Cousins Beach facing heartbreak, complicated feelings, and the challenge of choosing between the Fisher brothers.</p>
+                    <p class="series-genres-line">Drama • Romance</p>
+                    <a href="Detail-Series/detail-thesummeriturnedprettys2.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+
+            <!-- THE SUMMER I TURNED PRETTY (SEASON 3) -->
+            <div class="series-card">
+                <div class="series-poster">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs6nNDofayL8s0S58JhnIj0dco0ZuBEXpNAw&s" alt="The Summer I Turned Pretty (S3) Poster">
+                </div>
+                <div class="series-info">
+                    <h3 class="series-title">THE SUMMER I TURNED PRETTY (S3)</h3>
+                    <div class="series-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">7.6/10</span>
+                        <span class="series-meta">2025</span>
+                    </div>
+                    <p class="series-desc">As the final summer unfolds, Belly faces the consequences of her choices and must decide what—and who—she truly wants for her future.</p>
+                    <p class="series-genres-line">Drama • Romance</p>
+                    <a href="Detail-Series/detail-thesummeriturnedprettys3.html" class="view-btn">View Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 CINEA. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

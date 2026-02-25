@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinea - Your Guide to What's Next!</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open sidebar">☰</button>
+    <aside id="siteSidebar" class="site-sidebar" aria-hidden="true">
+        <div class="sidebar-head">
+            <div class="sidebar-brand"><div class="logo-icon">C</div><div>CINEA</div></div>
+            <button id="sidebarClose" class="sidebar-close" aria-label="Close sidebar">×</button>
+        </div>
+        <div class="sidebar-search"><input placeholder="Search movies & series" aria-label="Search"></div>
+
+        <div class="sidebar-section">
+            <h3>Popular Now</h3>
+            <div class="popular-list">
+                <a class="popular-item" href="Detail-Series/detail-strangerthings.html">
+                    <div class="popular-thumb" style="background-image:url('https://wallpapercave.com/wp/wp1839578.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Stranger Things</div><div class="popular-sub">Series • 2016</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Series/detail-berakingbad.html">
+                    <div class="popular-thumb" style="background-image:url('https://image.tmdb.org/t/p/original/4WM4yvTLrRi5lSHNjQMcIYRkenm.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Breaking Bad</div><div class="popular-sub">Series • 2008</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Movies/detail-tangled.html">
+                    <div class="popular-thumb" style="background-image:url('https://i.ebayimg.com/images/g/qS4AAOSwDk5Tre86/s-l1200.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Tangled</div><div class="popular-sub">Movie • 2010</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Movies/detail-titanic.html">
+                    <div class="popular-thumb" style="background-image:url('https://m.media-amazon.com/images/M/MV5BMjIxNTYxNzYxNl5BMl5BanBnXkFtZTcwNTYyNzI3Mw@@._V1_.jpg')"></div>
+                    <div class="popular-meta"><div class="popular-title">Titanic</div><div class="popular-sub">Movie • 1997</div></div>
+                </a>
+                <a class="popular-item" href="Detail-Series/detail-gamesofthrones.html">
+                    <div class="popular-thumb" style="background-image:url('https://awsimages.detik.net.id/community/media/visual/2021/12/06/game-of-thrones.jpeg?w=1200')"></div>
+                    <div class="popular-meta"><div class="popular-title">Game of Thrones</div><div class="popular-sub">Series • 2011</div></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">Popular mix of movies & series. Click an item to view details.</div>
+    </aside>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next<br>Favorite Story</h1>
+            <p>Explore the world of cinema with personalized recommendations</p>
+            <a href="movies.html" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+ <!-- Main Content -->
+    <div class="container">
+        <!-- Featured Series -->
+        <h2 class="section-title">Featured Series</h2>
+        <div class="featured-grid">
+            <a href="Detail-Series/detail-strangerthings.html" class="featured-card">
+                <div class="featured-image">
+                    <img src="https://wallpapercave.com/wp/wp1839578.jpg" alt="Stranger Things">
+                </div>
+                <div class="featured-info">
+                    <h3>Stranger Things</h3>
+                    <p>A group of kids uncovers supernatural mysteries and secret experiments in their small town.</p>
+                </div>
+            </a>
+            <a href="Detail-Series/detail-berakingbad.html" class="featured-card">
+                <div class="featured-image">
+                    <img src="https://image.tmdb.org/t/p/original/4WM4yvTLrRi5lSHNjQMcIYRkenm.jpg" alt="Breaking Bad">
+                </div>
+                <div class="featured-info">
+                    <h3>Breaking Bad</h3>
+                    <p>A chemistry teacher turned meth producer descends into the criminal underworld.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Recommended For You -->
+        <h2 class="section-title">Recommended For You</h2>
+        <div class="recommended-grid">
+            <a href="Detail-Movies/detail-20thcenturygirl.html" class="movie-card">
+                <div class="movie-thumbnail">
+                    <img src="https://image.tmdb.org/t/p/original/j73DItU1L0N7nmGA9S6sjwxKzPM.jpg" alt="20th Century Girl">
+                </div>
+                <div class="movie-title">
+                    <h4>20TH CENTURY<br>GIRL</h4>
+                </div>
+            </a>
+            <a href="Detail-Movies/detail-500daysofsummer.html" class="movie-card">
+                <div class="movie-thumbnail">
+                    <img src="https://image.tmdb.org/t/p/original/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg" alt="(500) Days of Summer">
+                </div>
+                <div class="movie-title">
+                    <h4>(500) DAYS<br>OF SUMMER</h4>
+                </div>
+            </a>
+            <a href="Detail-Movies/detail-enolaholmess1.html" class="movie-card">
+                <div class="movie-thumbnail">
+                    <img src="https://i.pinimg.com/736x/08/7b/f1/087bf1dfb45c3ca2a11cc7811bc053ab.jpg" alt="Enola Holmes">
+                </div>
+                <div class="movie-title">
+                    <h4>ENOLA<br>HOLMES</h4>
+                </div>
+            </a>
+            <a href="Detail-Series/detail-strangerthings.html" class="movie-card">
+                <div class="movie-thumbnail">
+                    <img src="https://wallpapercave.com/wp/wp1839578.jpg" alt="Stranger Things">
+                </div>
+                <div class="movie-title">
+                    <h4>STRANGER<br>THINGS</h4>
+                </div>
+            </a>
+            <a href="Detail-Series/detail-gamesofthrones.html" class="movie-card">
+                <div class="movie-thumbnail">
+                    <img src="https://files.ekmcdn.com/allwallpapers/images/game-of-thrones-winter-is-here-daenerys-targaryen-61x91-5cm-movie-poster-31585-p.jpg?v=599d4741-9423-4652-b292-e55e0354b409" alt="Game of Thrones">
+                </div>
+                <div class="movie-title">
+                    <h4>GAME OF<br>THRONES</h4>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="series.html">Series</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 CINEA. All rights reserved.
+        </div>
+    </footer>
+<script src="sidebar.js"></script>
+</body>
+</html>

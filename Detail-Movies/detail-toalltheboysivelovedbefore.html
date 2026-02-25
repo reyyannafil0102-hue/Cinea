@@ -1,0 +1,722 @@
+DETAIL MOVIES!
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To All The Boys I`ve Loved Before - Cinea</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 14, 26, 0.95);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+         .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column; /* ⬅ navbar turun ke bawah */
+            align-items: left;
+            gap: 0.8rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #3b82f6;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .tagline {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 0.45rem 1rem;
+            background: #273141;        /* biru muda */
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #3b82f6;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            padding: 1rem 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #3b82f6;
+        }
+
+        /* Hero Detail Section */
+        .hero-detail {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-banner {
+            height: 450px;
+            background:
+            linear-gradient(            
+            to right,
+            rgba(10, 14, 26, 0.95),
+            rgba(10, 14, 26, 0.4)
+        ),
+        
+        url("https://www.pluggedin.com/wp-content/uploads/2019/12/To_All_the_Boys_I_ve_Loved_Before__Large-1024x587.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+}
+
+        .hero-info h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: #d1d5db;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .star {
+            color: #fbbf24;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+        }
+
+        /* Left Column */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section {
+            background: rgba(26, 31, 53, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;   /* KUNCI UTAMA */
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* Cast Section */
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cast-member {
+            text-align: center;
+        }
+
+        .cast-avatar {
+            width: 90px;
+            height: 90px;
+            background: #374151;
+            background-size: cover;
+            border-radius: 50%;
+            margin: 0 auto 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 2rem;
+        }
+
+        .cast-avatar.kim {
+            background-image: url("https://i.pinimg.com/1200x/10/5b/9c/105b9cf875f71819041429f99936fa3e.jpg")
+        }
+
+        .cast-avatar.byeon {
+            background-image: url("https://i.pinimg.com/736x/77/db/97/77db978ebcfdb90903ca0725761eece7.jpg")
+        }
+
+        .cast-avatar.park {
+            background-image: url("https://i.pinimg.com/736x/b3/79/f2/b379f26eded42c8e29e0a01d55d2a65e.jpg")
+        }
+
+        .cast-avatar.roh {
+            background-image: url("https://i.pinimg.com/736x/3d/12/2c/3d122c6b429cc4141437a33b99d90a06.jpg")
+        }
+
+
+        .cast-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .character-name {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        /* Similar Movies */
+        .similar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .similar-card {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .similar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .similar-poster {
+            width: 88%;
+            height: 280px;
+            background: #374151;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+        }
+
+        .poster-obs1 {
+            background-image: url("https://i.etsystatic.com/18242346/r/il/ccd665/2434471712/il_fullxfull.2434471712_n7pj.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .poster-obs2 {
+            background-image: url("https://i.pinimg.com/originals/d8/cb/2c/d8cb2c83145a62f8becb0af0328a25cb.jpg");
+            background-size: cover;
+            background-position: center;
+        }   
+
+        .poster-obs3 {
+            background-image: url("https://m.media-amazon.com/images/M/MV5BMjAzMTE1NzQxNF5BMl5BanBnXkFtZTgwNjcwODY3MTI@._V1_.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .similar-title {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .sidebar-section {
+            background: rgba(26, 31, 53, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #9ca3af;
+        }
+
+        .info-value {
+            color: #ffffff;
+            text-align: right;
+        }
+
+        .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .genre-tag {
+            background: #3b82f6;
+            color: #ffffff;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .review-text {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(13, 18, 25, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #8b96a5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 2;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4a9eff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #5a6575;
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .tagline {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-banner {
+                height: 300px;
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+    </style>
+
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html" class="active">Movies</a></li>
+                    <li><a href="../series.html">Series</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../movies.html">Movies</a> / <span>To All The Boys I`ve Loved Before</span>
+    </div>
+
+<section class="hero-detail">
+    <div class="hero-banner">
+        <div class="hero-info">
+            <h1>To All The Boys I`ve Loved Before</h1>
+
+            <div class="meta-info">
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span>7.1/10</span>
+                </div>
+                <span>2018</span>
+                <span>1h 39m</span>
+                <span>  Romance • Comedy • Teen</span>
+            </div>
+
+            <div class="action-buttons">
+                <a href="https://www.youtube.com/embed/555oiY9RWM4" class="btn btn-primary">▶ Play Trailer</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div class="content-grid">
+        <div class="main-content">
+           <!-- Trailer Section -->
+<div class="section" id="trailer">
+    <h2>Trailer & Clips</h2>
+
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/555oiY9RWM4"
+            title="Official Trailer To All The Boys I`ve Loved Before"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="official-trailer-text">
+        Official Trailer<br>
+        Watch the official trailer
+    </p>
+</div>
+
+            <!-- Synopsis Section -->
+            <div class="section">
+                <h2>Synopsis</h2>
+                <p class="synopsis-text">
+                    To All the Boys I’ve Loved Before tells the story of Lara Jean Covey, a shy high-school junior whose love life has only existed in her imagination. For every boy she has ever had strong feelings for, Lara Jean writes a heartfelt letter—then hides it away, never intending for anyone to read them.
+                    <br><br>
+                    Her peaceful, invisible life takes a sudden turn when all five letters are mysteriously mailed out. Embarrassed and overwhelmed, Lara Jean panics, especially when one of the letters reaches Peter Kavinsky, a charming and well-known student at her
+                    school. To save face and avoid awkwardness with her sister’s ex-boyfriend (who also gets a letter), Lara Jean agrees to fake-date Peter.
+                    <br><br>
+                    As they spend more time together, their pretend relationship begins to feel real. Lara Jean must confront her insecurities, her fears of opening up, and the possibility that love might be more complicated—and more beautiful—than she imagined.
+                </p>
+            </div>
+
+            <!-- Cast Section -->
+            <div class="section">
+                <h2>Pemeran Utama</h2>
+                <div class="cast-grid">
+                    <div class="cast-member cast-obs">
+                        <div class="cast-avatar kim"></div>
+                        <div class="cast-name">Lana Condor</div>
+                        <div class="character-name">Lara Jean Covey</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar byeon"></div>
+                        <div class="cast-name">Noah Centineo</div>
+                        <div class="character-name">Peter Kavinsky</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar park"></div>
+                        <div class="cast-name">Janel Parrish</div>
+                        <div class="character-name">Margot Covey</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar roh"></div>
+                        <div class="cast-name">Anna Cathcart</div>
+                        <div class="character-name">Kitty Covey</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Movies Section -->
+            <div class="section">
+                <h2>Film Serupa</h2>
+                <div class="similar-grid">
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs1"></div>
+                        <div class="similar-title">The Kissing Booth</div>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs2"></div>
+                        <div class="similar-title">Love, Rosie</div>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs3"></div>
+                        <div class="similar-title">Everything, Everything</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>Movie Info</h3>
+                <div class="info-row">
+                    <span class="info-label">Release Date</span>
+                    <span class="info-value">August 17, 2018</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Duration</span>
+                    <span class="info-value">1h 39m</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Budget</span>
+                    <span class="info-value">Not public disclosed</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Box Office</span>
+                    <span class="info-value">N/A (Netflix exclusive release)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Language</span>
+                    <span class="info-value">English</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Country</span>
+                    <span class="info-value">United States</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Production & Crew</h3>
+                <div class="info-row">
+                    <span class="info-label">Director</span>
+                    <span class="info-value">Susan Johnson</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Writer</span>
+                    <span class="info-value">Sofia Alvarez (screenplay), Jenny Han (novel)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Producer</span>
+                    <span class="info-value">Matt Kaplan, Dougie Cash</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Cinematography</span>
+                    <span class="info-value">Michael Fimognari</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Genres</h3>
+                <div class="genre-tags">
+                    <span class="genre-tag">Romance</span>
+                    <span class="genre-tag">Comedy</span>
+                    <span class="genre-tag">Teen</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Storyline</h3>
+                <p class="review-text">
+                    Lara Jean’s private love letters are accidentally sent to her past crushes, exposing her hidden feelings. A fake relationship with Peter Kavinsky slowly turns real, changing how she sees love and herself.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html">Movies</a></li>
+                    <li><a href="../series.html">Series</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            ©️ 2026 CINEA. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

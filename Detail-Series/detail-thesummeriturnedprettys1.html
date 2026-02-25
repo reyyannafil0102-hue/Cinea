@@ -1,0 +1,745 @@
+DETAIL MOVIES!
+
+<!DOCTYPE html>
+<html lang="id">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html">Movies</a></li>
+                    <li><a href="../series.html">Series</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 14, 26, 0.95);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+         .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column; /* ⬅ navbar turun ke bawah */
+            align-items: left;
+            gap: 0.8rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #3b82f6;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .tagline {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 0.45rem 1rem;
+            background: #273141;        /* biru muda */
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #3b82f6;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 80px auto 0;
+            padding: 1rem 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #3b82f6;
+        }
+
+        /* Hero Detail Section */
+        .hero-detail {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-banner {
+            height: 450px;
+            background:
+            linear-gradient(            
+            to right,
+            rgba(10, 14, 26, 0.95),
+            rgba(10, 14, 26, 0.4)
+        ),
+        
+        url("https://i.ytimg.com/vi/CbsBIjxA26s/maxresdefault.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+}
+
+        .hero-info h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: #d1d5db;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .star {
+            color: #fbbf24;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+        }
+
+        /* Left Column */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section {
+            background: rgba(26, 31, 53, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;   /* KUNCI UTAMA */
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* Cast Section */
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cast-member {
+            text-align: center;
+        }
+
+        .cast-avatar {
+            width: 90px;
+            height: 90px;
+            background: #374151;
+            background-size: cover;
+            border-radius: 50%;
+            margin: 0 auto 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 2rem;
+        }
+
+        .cast-avatar.kim {
+            background-image: url("https://image.tmdb.org/t/p/w500/lU5VONHkehpD38Cb3lYawCzZfLj.jpg")
+        }
+
+        .cast-avatar.byeon {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWyg2_UMlVdhWH3JPM3YU4HF2NSHY7E3ykzQ&s")
+        }
+
+        .cast-avatar.park {
+            background-image: url("https://image.tmdb.org/t/p/w500/snYCYm31OniXr024HUcomunYpjV.jpg")
+        }
+
+        .cast-avatar.roh {
+            background-image: url("https://ntvb.tmsimg.com/assets/assets/1189711_v9_aa.jpg")
+        }
+
+        .cast-avatar.roh5 {
+            background-image: url("https://media.glamour.com/photos/68a38b99ad18cde18c1532af/1:1/w_1688,h_1688,c_limit/20250814_JackieChung_Editorial.jpg")
+        }
+
+        .cast-avatar.roh6 {
+            background-image: url("https://image.tmdb.org/t/p/w500/l8vUgOu1xVE1BKVCyrBf4M5PCBG.jpg")
+        }
+
+        .cast-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .character-name {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        /* Similar Movies */
+        .similar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .similar-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;   /* 🔥 ini kuncinya */
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .similar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .similar-poster {
+            width: 88%;
+            height: 280px;
+            background: #374151;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+        }
+
+        .poster-obs1 {
+            background-image: url("https://resizing.flixster.com/dnFDUMuzRowgLSp51blW4DlDtFk=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZjU3ZjhkYTEtNTUyNy00NzA5LTk0ZmEtMTVlYzMyNTMxYTc2LmpwZw==");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .poster-obs2 {
+            background-image: url("https://i.pinimg.com/736x/a6/16/f5/a616f50618dfd56585b0299161a45455.jpg");
+            background-size: cover;
+            background-position: center;
+        }   
+
+        .poster-obs3 {
+            background-image: url("https://lh5.googleusercontent.com/proxy/keDWyo2h9gYrBO3rgMjp5Br0N399mIHj9XO5Cw3lPt5KMoUVRtsw_6McQOICOkQTOi9nd3LNSl63NiymPkB2vF3gaOa-8XopJWR7Aqy8BZEqqEwbyRY");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .poster-obs4 {
+            background-image: url("https://m.media-amazon.com/images/I/413cw25LlfL._AC_UF894,1000_QL80_.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .similar-title {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .sidebar-section {
+            background: rgba(26, 31, 53, 0.4);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #9ca3af;
+        }
+
+        .info-value {
+            color: #ffffff;
+            text-align: right;
+        }
+
+        .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .genre-tag {
+            background: #3b82f6;
+            color: #ffffff;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .review-text {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(13, 18, 25, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #8b96a5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 2;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4a9eff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #5a6575;
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .tagline {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-banner {
+                height: 300px;
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+    </style>
+
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">C</div>
+                CINEA
+            </a>
+            <div class="tagline">Your Guide to What's Next!</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html" class="active">Movies</a></li>
+                    <li><a href="../series.html">Series</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../series.html">Series</a> / <span>The Summer I Turned Pretty (Season 1)</span>
+    </div>
+
+<section class="hero-detail">
+    <div class="hero-banner">
+        <div class="hero-info">
+            <h1>The Summer I Turned Pretty (Season 1)</h1>
+
+            <div class="meta-info">
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span>7.7/10</span>
+                </div>
+                <span>2009</span>
+                <span>1h 35m</span>
+                <span>Drama, Comedy, Romance</span>
+            </div>
+
+            <div class="action-buttons">
+                <a href="https://www.youtube.com/embed/LPNs5kKeEgE" class="btn btn-primary">▶ Play Trailer</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div class="content-grid">
+        <div class="main-content">
+           <!-- Trailer Section -->
+<div class="section" id="trailer">
+    <h2>Trailer & Clips</h2>
+
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/LPNs5kKeEgE"
+            title="Official Trailer The Summer I Turned Pretty (Season 1)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="official-trailer-text">
+        Official Trailer<br>
+        Watch the official trailer
+    </p>
+</div>
+
+            <!-- Synopsis Section -->
+            <div class="section">
+                <h2>Synopsis</h2>
+                <p class="synopsis-text">
+                    The Summer I Turned Pretty Season 1 follows Isabel “Belly” Conklin as she spends her summer at Cousins Beach, a place filled with childhood memories, sunshine, and long days by the ocean. This summer, however, feels different as Belly begins to step into adulthood.
+                    <br><br>
+                    She finds herself caught between two brothers, Conrad and Jeremiah Fisher, both of whom she has known her entire life. Old friendships are tested, emotions run high, and secrets begin to surface within both families.
+                    <br><br>
+                    As Belly navigates first love, heartbreak, and self-discovery, the season explores themes of growing up, complicated relationships, and how one summer can change everything.
+            </div>
+
+            <!-- Cast Section -->
+            <div class="section">
+                <h2>Pemeran Utama</h2>
+                <div class="cast-grid">
+                    <div class="cast-member cast-obs">
+                        <div class="cast-avatar kim"></div>
+                        <div class="cast-name">Lola Tung</div>
+                        <div class="character-name">Isabel Belly Conklin</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar byeon"></div>
+                        <div class="cast-name">Christopher Briney</div>
+                        <div class="character-name">Conrad Fisher</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar park"></div>
+                        <div class="cast-name">Gavin Casalegno</div>
+                        <div class="character-name">Jeremiah Fisher</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar roh"></div>
+                        <div class="cast-name">Sean Kaufman</div>
+                        <div class="character-name">Steven Conklin</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar roh5"></div>
+                        <div class="cast-name">Jackie Chung</div>
+                        <div class="character-name">Laurel Park</div>
+                    </div>
+                    <div class="cast-member">
+                        <div class="cast-avatar roh6"></div>
+                        <div class="cast-name">Rachel Blanchard</div>
+                        <div class="character-name">Susannah Fisher</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Movies Section -->
+            <div class="section">
+                <h2>Film Serupa</h2>
+                <div class="similar-grid">
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs1"></div>
+                        <div class="similar-title">XO, Kitty</div>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs2"></div>
+                        <div class="similar-title">Love, Victor</div>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs3"></div>
+                        <div class="similar-title">Never Have I Ever</div>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-poster poster-obs4"></div>
+                        <div class="similar-title">Dawson's Creek</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>Movie Info</h3>
+                <div class="info-row">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Released</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Network / Platform</span>
+                    <span class="info-value">Amazon Prime Video</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Total Season</span>
+                    <span class="info-value">3</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Total Episodes</span>
+                    <span class="info-value">7 (Season 1)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Episode Duration</span>
+                    <span class="info-value">45-48 Minutes</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Country</span>
+                    <span class="info-value">United States</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Season Release Dates</h3>
+                <div class="info-row">
+                    <span class="info-label">Season 1</span>
+                    <span class="info-value">2022</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Season 2</span>
+                    <span class="info-value"> 2023</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Season 3</span>
+                    <span class="info-value">2025</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Genres</h3>
+                <div class="genre-tags">
+                    <span class="genre-tag">Romance</span>
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">Coming-of-Age</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Storyline</h3>
+                <p class="review-text">
+                    Belly returns to Cousins Beach for the summer and finds that everything feels different. As friendships shift and feelings grow, she is caught in a complicated love triangle that changes her forever.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html">Movies</a></li>
+                    <li><a href="../series.html">Series</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookie">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            ©️ 2026 CINEA. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
