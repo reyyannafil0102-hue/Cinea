@@ -491,10 +491,22 @@
                 gap: 1rem;
             }
 
+            /* Mobile: hide the top nav (use sidebar for navigation) */
+            nav { display: none !important; }
+
+            /* Add extra top spacing so fixed header doesn't overlap content */
+            .container { margin-top: 160px; padding: 1.5rem 1rem; }
+
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
 
+
+/* Footer: keep columns readable on small screens */
+@media (max-width: 600px) {
+    .footer-content { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem; text-align: left; align-items: start; }
+    .footer-section { text-align: left; }
+}
             .series-card {
                 min-height: auto;
             }

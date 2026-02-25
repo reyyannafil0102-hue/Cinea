@@ -1,4 +1,10 @@
 /* Attractive sidebar styles (shared) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
 :root{--accent:#6b46c1;--accent-2:#3b82f6;--bg:#07101a}
 .sidebar-toggle{position:fixed;left:18px;top:18px;z-index:1200;background:var(--accent);color:#fff;border:0;width:44px;height:44px;border-radius:8px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .site-sidebar{position:fixed;left:0;top:0;height:100vh;width:340px;transform:translateX(-120%);background:linear-gradient(180deg,rgba(8,10,20,0.95),rgba(6,8,14,0.96));color:#fff;padding:1.25rem;z-index:1199;transition:transform .28s ease,box-shadow .28s;box-shadow:2px 0 30px rgba(2,6,23,0.7);overflow:auto}
@@ -7,8 +13,6 @@
 .sidebar-brand{display:flex;align-items:center;gap:.6rem}
 .sidebar-brand .logo-icon{width:36px;height:36px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
 .sidebar-close{background:transparent;border:0;color:#d1d5db;font-size:22px;cursor:pointer}
-.sidebar-search{display:flex;gap:.5rem;margin:0.6rem 0;padding:0.35rem;background:rgba(255,255,255,0.03);border-radius:10px}
-.sidebar-search input{flex:1;background:transparent;border:0;color:#e6eef8;padding:0.4rem;font-size:0.95rem}
 .sidebar-section{margin:0.8rem 0}
 .sidebar-section h3{font-size:0.95rem;color:#e6eef8;margin:0 0 .6rem 0}
 .popular-list{display:flex;flex-direction:column;gap:.6rem}

@@ -485,3 +485,9 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+/* Footer: keep columns readable on small screens */
+@media (max-width: 600px) {
+    .footer-content { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem; text-align: left; align-items: start; }
+    .footer-section { text-align: left; }
+}
